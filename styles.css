@@ -37,21 +37,7 @@ body {
   align-items: center;
 }
 
-.logo {
-  font-family: 'Squada One';
-  font-weight: 400;
-  font-style: Regular;
-  font-size: 32px;
-  line-height: 20px;
-  letter-spacing: -1.2%;
 
-}
-
-.nav-links {
-  display: flex;
-  list-style: none;
-  gap: 2rem;
-}
 
 .nav-links a {
   color: white;
@@ -111,19 +97,8 @@ body {
   align-items: center;
 }
 
-.hero-text h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
 
-.hero-text p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-}
-
+/*
 .search-box {
   display: flex;
   background: white;
@@ -140,7 +115,7 @@ body {
   font-size: 1rem;
   color: #333;
 }
-
+*/
 .search-btn {
   background: #ff9800;
   color: white;
@@ -197,7 +172,7 @@ body {
 /* Home Kitchen Section */
 .kitchen-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   margin-bottom: 2rem;
 }
@@ -669,9 +644,7 @@ body {
     gap: 2rem;
   }
 
-  .hero-text h1 {
-    font-size: 2rem;
-  }
+
 
   .chef-illustration {
     width: 300px;
@@ -757,4 +730,81 @@ body {
 /* Body scroll lock when modal is open */
 .body-no-scroll {
   overflow: hidden;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: 'Squada One', sans-serif;
+  line-height: 20px;
+  letter-spacing: -0.012em;
+  position: relative;
+  left: -14.5px;
+}
+
+/* Update navigation links */
+.nav-links {
+  gap: 40px;
+}
+
+/* Update hero text styles */
+.hero-text h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 70px;
+  line-height: 100%;
+  letter-spacing: 0;
+  width: 534px;
+  height: 147px;
+}
+
+/* Update hero description */
+.hero-text p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  letter-spacing: -0.012em;
+  width: 441px;
+  height: 40px;
+}
+
+/* Update search box */
+.search-box {
+  width: 398px;
+  height: 58px;
+  border-radius: 10px;
+}
+
+.search-input {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: -0.012em;
+  padding: 19px 22px;
+}
+
+/* Update home kitchen grid to show 4 items per row */
+.kitchen-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* For smaller screens, adjust the grid */
+@media (max-width: 1024px) {
+  .kitchen-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .kitchen-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .kitchen-grid {
+    grid-template-columns: 1fr;
+  }
 }
